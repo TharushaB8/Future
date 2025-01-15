@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FancyFuture - Animes</title>
+    <link rel="stylesheet" href="/css/Future.css">
+    <script defer src="/js/script.js"></script>
+    <style>
+        main {
+            padding: 20px;
+            margin-bottom: 50px; /* Space before footer */
+        }
+        .list-container {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .list-container li {
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #222; /* Dark background for items */
+            color: #fff; /* White text */
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .list-container li:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Fancy Movies</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Movie.html">Movies</a></li>
+            <li><a href="tvseries.html">TV Series</a></li>
+            <li><a href="animes.html" class="active">Animes</a></li>
+        </ul>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search movies, animes, TV series..." oninput="filterResults()" />
+            <div id="searchResults" class="search-results"></div>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="page-title">.</h1>
+        <ul class="list-container">
+            <li onclick="openModal('Naruto')">Naruto</li>
+            <li onclick="openModal('Attack on Titan')">Attack on Titan</li>
+            <li onclick="openModal('One Piece')">One Piece</li>
+            <li onclick="openModal('Death Note')">Death Note</li>
+            <li onclick="openModal('Demon Slayer')">Demon Slayer</li>
+            <li onclick="openModal('My Hero Academia')">My Hero Academia</li>
+            <li onclick="openModal('Hunter x Hunter')">Hunter x Hunter</li>
+            <li onclick="openModal('Fullmetal Alchemist: Brotherhood')">Fullmetal Alchemist: Brotherhood</li>
+            <li onclick="openModal('Sword Art Online')">Sword Art Online</li>
+            <li onclick="openModal('Bleach')">Bleach</li>
+            <li onclick="openModal('Jujutsu Kaisen')">Jujutsu Kaisen</li>
+            <li onclick="openModal('Tokyo Ghoul')">Tokyo Ghoul</li>
+            <li onclick="openModal('Dragon Ball Z')">Dragon Ball Z</li>
+            <li onclick="openModal('Fairy Tail')">Fairy Tail</li>
+            <li onclick="openModal('Black Clover')">Black Clover</li>
+            <li onclick="openModal('One Punch Man')">One Punch Man</li>
+            <li onclick="openModal('Neon Genesis Evangelion')">Neon Genesis Evangelion</li>
+            <li onclick="openModal('Code Geass')">Code Geass</li>
+            <li onclick="openModal('Steins;Gate')">Steins;Gate</li>
+            <li onclick="openModal('Re:Zero')">Re:Zero</li>
+            <li onclick="openModal('The Rising of the Shield Hero')">The Rising of the Shield Hero</li>
+            <li onclick="openModal('Erased')">Erased</li>
+            <li onclick="openModal('Akame ga Kill!')">Akame ga Kill!</li>
+            <li onclick="openModal('Overlord')">Overlord</li>
+            <li onclick="openModal('Dr. Stone')">Dr. Stone</li>
+            <li onclick="openModal('Vinland Saga')">Vinland Saga</li>
+            <li onclick="openModal('The Seven Deadly Sins')">The Seven Deadly Sins</li>
+            <li onclick="openModal('Toradora!')">Toradora!</li>
+            <li onclick="openModal('Your Lie in April')">Your Lie in April</li>
+        </ul>
+    </main>
+
+    <!-- Modal Pop-Up -->
+    <div id="movieModal" class="modal">
+        <div class="modal-overlay" onclick="closeModal()"></div>
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="movieTitle"></h2>
+            <p id="movieDescription"></p>
+            <div class="download-options">
+                <h3>Download Options:</h3>
+                <button class="download-btn" data-resolution="2K" onclick="downloadMovie('2K')">Download 2K</button>
+                <button class="download-btn" data-resolution="1080p" onclick="downloadMovie('1080p')">Download 1080p</button>
+                <button class="download-btn" data-resolution="720p" onclick="downloadMovie('720p')">Download 720p</button>
+                <button class="download-btn" data-resolution="480p" onclick="downloadMovie('480p')">Download 480p</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 FancyMovies © Tharusha LLC. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

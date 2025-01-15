@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FancyMovies</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/Future.css">
+
+    <style>
+        main {
+            padding: 20px;
+            margin-bottom: 50px; /* Space before footer */
+        }
+        .list-container {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .list-container li {
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #222; /* Dark background for items */
+            color: #fff; /* White text */
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .list-container li:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+<header class="navbar">
+    <div class="logo">Fancy Movies</div>
+    <ul class="nav-links">
+        <li><a href="/index.html">Home</a></li>
+        <li class="dropdown-container">
+            <a href="#">Movies</a>
+            <ul class="dropdown">
+                <li><a href="#action-movies">Action</a></li>
+                <li><a href="#horror-movies">Horror</a></li>
+                <li><a href="#comedy-movies">Comedy</a></li>
+                <li><a href="#sci-fi-movies">Sci-Fi</a></li>
+                <li><a href="#romantic-movies">Romantic</a></li>
+            </ul>
+        </li>
+        <li class="dropdown-container">
+            <a href="#">Animes and TV-Series</a>
+            <ul class="dropdown">
+                <li><a href="tvseries.html">TV Series</a></li>
+                <li><a href="animes.html">Animes</a></li>
+            </ul>
+        </li>
+        <li><a href="/Future.html#contact">Contact</a></li>
+    </ul>
+
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search movies, animes, TV series..." oninput="filterResults()" />
+        <div id="searchResults" class="search-results"></div>
+    </div>
+</header>
+
+
+    
+    <!-- Movie Categories -->
+    <section id="action-movies">
+        <h2>Action Movies</h2>
+        <ul>
+            <li onclick="openModal('The Dark Knight')">The Dark Knight</li>
+            <li onclick="openModal('Mad Max: Fury Road')">Mad Max: Fury Road</li>
+            <li onclick="openModal('Gladiator')">Gladiator</li>
+            <li onclick="openModal('John Wick')">John Wick</li>
+            <li onclick="openModal('Avengers: Endgame')">Avengers: Endgame</li>
+            <li onclick="openModal('Die Hard')">Die Hard</li>
+            <li onclick="openModal('The Matrix')">The Matrix</li>
+            <li onclick="openModal('Spider-Man: No Way Home')">Spider-Man: No Way Home</li>
+            <li onclick="openModal('Mission: Impossible – Fallout')">Mission: Impossible – Fallout</li>
+            <li onclick="openModal('Iron Man')">Iron Man</li>
+            <li onclick="openModal('Black Panther')">Black Panther</li>
+            <li onclick="openModal('Terminator 2: Judgment Day')">Terminator 2: Judgment Day</li>
+            <li onclick="openModal('Inception')">Inception</li>
+            <li onclick="openModal('Guardians of the Galaxy')">Guardians of the Galaxy</li>
+            <li onclick="openModal('Fast & Furious 7')">Fast & Furious 7</li>
+            <li onclick="openModal('Deadpool')">Deadpool</li>
+            <li onclick="openModal('Captain America: Civil War')">Captain America: Civil War</li>
+            <li onclick="openModal('Thor: Ragnarok')">Thor: Ragnarok</li>
+            <li onclick="openModal('The Bourne Ultimatum')">The Bourne Ultimatum</li>
+            <li onclick="openModal('Avatar')">Avatar</li>
+            <li onclick="openModal('X-Men: Days of Future Past')">X-Men: Days of Future Past</li>
+            <li onclick="openModal('Pacific Rim')">Pacific Rim</li>
+            <li onclick="openModal('Logan')">Logan</li>
+            <li onclick="openModal('Iron Man 3')">Iron Man 3</li>
+            <li onclick="openModal('The Expendables 2')">The Expendables 2</li>
+            <li onclick="openModal('King Kong')">King Kong</li>
+            <li onclick="openModal('Star Wars: The Force Awakens')">Star Wars: The Force Awakens</li>
+            <li onclick="openModal('The Raid 2')">The Raid 2</li>
+            <li onclick="openModal('The Equalizer')">The Equalizer</li>
+            
+        </ul>
+    </section>
+
+    <section id="horror-movies">
+        <h2>Horror Movies</h2>
+        <ul>
+            <li onclick="openModal('The Conjuring')">The Conjuring</li>
+            <li onclick="openModal('A Nightmare on Elm Street')">A Nightmare on Elm Street</li>
+            <li onclick="openModal('Halloween')">Halloween</li>
+            <li onclick="openModal('The Shining')">The Shining</li>
+            <li onclick="openModal('Get Out')">Get Out</li>
+            <li onclick="openModal('It')">It</li>
+            <li onclick="openModal('Hereditary')">Hereditary</li>
+            <li onclick="openModal('Insidious')">Insidious</li>
+            <li onclick="openModal('The Exorcist')">The Exorcist</li>
+            <li onclick="openModal('Paranormal Activity')">Paranormal Activity</li>
+            <li onclick="openModal('Texas Chainsaw Massacre')">Texas Chainsaw Massacre</li>
+            <li onclick="openModal('The Ring')">The Ring</li>
+            <li onclick="openModal('Jaws')">Jaws</li>
+            <li onclick="openModal('Rosemary’s Baby')">Rosemary’s Baby</li>
+            <li onclick="openModal('Shutter Island')">Shutter Island</li>
+            <li onclick="openModal('Poltergeist')">Poltergeist</li>
+            <li onclick="openModal('It Follows')">It Follows</li>
+            <li onclick="openModal('Dont Breathe')">Don't Breathe</li>
+            <li onclick="openModal('The Witch')">The Witch</li>
+            <li onclick="openModal('The Babadook')">The Babadook</li>
+            <li onclick="openModal('The Cabin in the Woods')">The Cabin in the Woods</li>
+            <li onclick="openModal('Annabelle')">Annabelle</li>
+            <li onclick="openModal('Sinister')">Sinister</li>
+            <li onclick="openModal('The Others')">The Others</li>
+            <li onclick="openModal('The Grudge')">The Grudge</li>
+            <li onclick="openModal('The Conjuring 2')">The Conjuring 2</li>
+            <li onclick="openModal('The Autopsy of Jane Doe')">The Autopsy of Jane Doe</li>
+            <li onclick="openModal('The Nun')">The Nun</li>
+            <li onclick="openModal('Us')">Us</li>
+
+        </ul>
+    </section>
+
+    <section id="comedy-movies">
+        <h2>Comedy Movies</h2>
+        <ul>
+            <li onclick="openModal('Superbad')">Superbad</li>
+            <li onclick="openModal('The Hangover')">The Hangover</li>
+            <li onclick="openModal('Step Brothers')">Step Brothers</li>
+            <li onclick="openModal('Anchorman: The Legend of Ron Burgundy')">Anchorman: The Legend of Ron Burgundy</li>
+            <li onclick="openModal('21 Jump Street')">21 Jump Street</li>
+            <li onclick="openModal('Groundhog Day')">Groundhog Day</li>
+            <li onclick="openModal('Ferris Bueller\'s Day Off')">Ferris Bueller's Day Off</li>
+            <li onclick="openModal('Ghostbusters')">Ghostbusters</li>
+            <li onclick="openModal('Jumanji')">Jumanji</li>
+            <li onclick="openModal('Shrek')">Shrek</li>
+            <li onclick="openModal('Bad Moms')">Bad Moms</li>
+            <li onclick="openModal('Office Space')">Office Space</li>
+            <li onclick="openModal('Crazy, Stupid, Love')">Crazy, Stupid, Love</li>
+            <li onclick="openModal('The 40-Year-Old Virgin')">The 40-Year-Old Virgin</li>
+            <li onclick="openModal('Meet the Parents')">Meet the Parents</li>
+            <li onclick="openModal('The Big Lebowski')">The Big Lebowski</li>
+            <li onclick="openModal('Super Troopers')">Super Troopers</li>
+            <li onclick="openModal('Hot Fuzz')">Hot Fuzz</li>
+            <li onclick="openModal('21 & Over')">21 & Over</li>
+            <li onclick="openModal('Pitch Perfect')">Pitch Perfect</li>
+            <li onclick="openModal('American Pie')">American Pie</li>
+            <li onclick="openModal('Legally Blonde')">Legally Blonde</li>
+            <li onclick="openModal('Rush Hour')">Rush Hour</li>
+            <li onclick="openModal('Wedding Crashers')">Wedding Crashers</li>
+            <li onclick="openModal('My Big Fat Greek Wedding')">My Big Fat Greek Wedding</li>
+            <li onclick="openModal('Horrible Bosses')">Horrible Bosses</li>
+            <li onclick="openModal('The Proposal')">The Proposal</li>
+            <li onclick="openModal('Little Miss Sunshine')">Little Miss Sunshine</li>
+            <li onclick="openModal('Napoleon Dynamite')">Napoleon Dynamite</li>
+            
+        </ul>
+    </section>
+
+    <section id="sci-fi-movies">
+        <h2>Sci-Fi Movies</h2>
+        <ul>
+            <li onclick="openModal('Interstellar')">Interstellar</li>
+            <li onclick="openModal('Blade Runner 2049')">Blade Runner 2049</li>
+            <li onclick="openModal('Star Wars: The Empire Strikes Back')">Star Wars: The Empire Strikes Back</li>
+            <li onclick="openModal('The Matrix')">The Matrix</li>
+            <li onclick="openModal('Inception')">Inception</li>
+            <li onclick="openModal('2001: A Space Odyssey')">2001: A Space Odyssey</li>
+            <li onclick="openModal('The Terminator')">The Terminator</li>
+            <li onclick="openModal('Alien')">Alien</li>
+            <li onclick="openModal('District 9')">District 9</li>
+            <li onclick="openModal('Arrival')">Arrival</li>
+            <li onclick="openModal('The Martian')">The Martian</li>
+            <li onclick="openModal('Gravity')">Gravity</li>
+            <li onclick="openModal('Ex Machina')">Ex Machina</li>
+            <li onclick="openModal('Minority Report')">Minority Report</li>
+            <li onclick="openModal('Star Trek')">Star Trek</li>
+            <li onclick="openModal('Looper')">Looper</li>
+            <li onclick="openModal('Children of Men')">Children of Men</li>
+            <li onclick="openModal('Edge of Tomorrow')">Edge of Tomorrow</li>
+            <li onclick="openModal('Gattaca')">Gattaca</li>
+            <li onclick="openModal('Starship Troopers')">Starship Troopers</li>
+            <li onclick="openModal('Moon')">Moon</li>
+            <li onclick="openModal('Jurassic Park')">Jurassic Park</li>
+            <li onclick="openModal('Avatar')">Avatar</li>
+            <li onclick="openModal('Planet of the Apes')">Planet of the Apes</li>
+            <li onclick="openModal('Ready Player One')">Ready Player One</li>
+            <li onclick="openModal('The Fifth Element')">The Fifth Element</li>
+            <li onclick="openModal('Terminator 2: Judgment Day')">Terminator 2: Judgment Day</li>
+            <li onclick="openModal('Solaris')">Solaris</li>
+            <li onclick="openModal('Blade Runner')">Blade Runner</li>
+            
+        </ul>
+    </section>
+
+    <section id="romantic-movies">
+        <h2>Romantic Movies</h2>
+        <ul>
+            <li onclick="openModal('The Notebook')">The Notebook</li>
+            <li onclick="openModal('Titanic')">Titanic</li>
+            <li onclick="openModal('Pride & Prejudice')">Pride & Prejudice</li>
+            <li onclick="openModal('La La Land')">La La Land</li>
+            <li onclick="openModal('500 Days of Summer')">500 Days of Summer</li>
+            <li onclick="openModal('When Harry Met Sally')">When Harry Met Sally</li>
+            <li onclick="openModal('The Fault in Our Stars')">The Fault in Our Stars</li>
+            <li onclick="openModal('Pretty Woman')">Pretty Woman</li>
+            <li onclick="openModal('Notting Hill')">Notting Hill</li>
+            <li onclick="openModal('Love Actually')">Love Actually</li>
+            <li onclick="openModal('The Vow')">The Vow</li>
+            <li onclick="openModal('A Walk to Remember')">A Walk to Remember</li>
+            <li onclick="openModal('Crazy Rich Asians')">Crazy Rich Asians</li>
+            <li onclick="openModal('Silver Linings Playbook')">Silver Linings Playbook</li>
+            <li onclick="openModal('Before Sunrise')">Before Sunrise</li>
+            <li onclick="openModal('500 Days of Summer')">500 Days of Summer</li>
+            <li onclick="openModal('The Proposal')">The Proposal</li>
+            <li onclick="openModal('Sweet Home Alabama')">Sweet Home Alabama</li>
+            <li onclick="openModal('You have Got Mail')">You've Got Mail</li>
+            <li onclick="openModal('Romeo + Juliet')">Romeo + Juliet</li>
+            <li onclick="openModal('The Twilight Saga')">The Twilight Saga</li>
+            <li onclick="openModal('Dear John')">Dear John</li>
+            <li onclick="openModal('Love, Simon')">Love, Simon</li>
+            <li onclick="openModal('While You Were Sleeping')">While You Were Sleeping</li>
+            <li onclick="openModal('The Longest Ride')">The Longest Ride</li>
+            <li onclick="openModal('The Time Traveler s Wife')">The Time Traveler's Wife</li>
+            <li onclick="openModal('Amélie')">Amélie</li>
+            <li onclick="openModal('Our Souls at Night')">Our Souls at Night</li>
+            <li onclick="openModal('The Best of Me')">The Best of Me</li>
+            <li onclick="openModal('Me Before You')">Me Before You</li>
+            
+        </ul>
+    </section>
+
+    <!-- Modal Pop-Up -->
+    <div id="movieModal" class="modal">
+        <div class="modal-overlay" onclick="closeModal()"></div>
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="movieTitle"></h2>
+            <p id="movieDescription"></p>
+            <div class="download-options">
+                <h3>Download Options:</h3>
+                <button class="download-btn" data-resolution="2K" onclick="downloadMovie('2K')">Download 2K</button>
+                <button class="download-btn" data-resolution="1080p" onclick="downloadMovie('1080p')">Download 1080p</button>
+                <button class="download-btn" data-resolution="720p" onclick="downloadMovie('720p')">Download 720p</button>
+                <button class="download-btn" data-resolution="480p" onclick="downloadMovie('480p')">Download 480p</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 FancyMovies © Tharusha LLC. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,436 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #111;
+    color: white;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #00bcd4;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00bcd4;
+}
+
+.dropdown-container:hover .dropdown {
+    display: block;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: #1a1a1a;
+    list-style: none;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.dropdown li a {
+    color: #fff;
+    padding: 10px;
+}
+
+.dropdown li a:hover {
+    background-color: #333;
+}
+
+/* Movie Categories */
+section {
+    padding: 100px 20px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+ul li {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+ul li:hover {
+    background-color: #fff;
+}
+
+.navbar .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #00ffff;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+
+
+/* Movie Categories Section */
+section {
+    padding: 50px 0;
+    background-color: #1a1a1a;
+    margin-top: 100px;
+    border-bottom: 2px solid rgba(0, 255, 255, 0.2);
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0 30px;
+}
+
+ul li {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #fff;
+    box-shadow: 0 6px 12px rgba(0, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+ul li:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2);
+}
+
+ul li:active {
+    transform: scale(0.98);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(90deg, #005f5f, #00b3b3);
+    color: white;
+    width: 100%;
+    font-size: 1rem;
+    box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+/* Hover effects */
+ul li:hover {
+    background-color: rgba(0, 255, 255, 0.05);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* About section */
+.about {
+    padding: 60px 20px;
+    background-color: #222; /* Dark background for consistency */
+    text-align: center;
+    color: #fff;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff; /* White color for header */
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+.about p {
+    font-size: 18px;
+    color: #bbb; /* Lighter color for text */
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    animation-delay: 0.5s;
+}
+
+/* Fancy Styled Phrases with Neon and Hover Effects */
+.about-phrases h3 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347, 0 0 30px #ff6347; /* Glow effect */
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+/* First phrase with gradient color */
+.about-phrases h3:nth-child(1) {
+    animation-delay: 1s;
+    background: linear-gradient(90deg, rgba(255, 99, 71, 1) 0%, rgba(255, 215, 0, 1) 100%); /* Gradient from red to yellow */
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/* Second phrase with gradient color */
+.about-phrases h3:nth-child(2) {
+    animation-delay: 1.5s;
+    background: linear-gradient(90deg, rgba(70, 130, 180, 1) 0%, rgba(0, 255, 255, 1) 100%); /* Gradient from steel blue to cyan */
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/* Hover effect: glowing effect on hover */
+.about-phrases h3:hover {
+    text-shadow: 0 0 15px #ff6347, 0 0 25px #ff6347, 0 0 35px #ff6347;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-top: 50px;
+    color: #00ffff;
+}
+
+section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+section ul li {
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+section ul li:hover {
+    color: #33ccff;
+}
+
+
+/* Modal Enhancements */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    cursor: pointer;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #111, #333);
+    color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+    position: relative;
+    width: 400px;
+    max-width: 90%;
+    z-index: 1001;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content h2 {
+    color: #00ffff;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.modal-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.modal-content .download-btn {
+    background-color: #00ffff;
+    color: #111;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content .download-btn:hover {
+    background-color: #008c8c;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.search-bar {
+    position: relative;
+    margin-left: auto;
+    max-width: 400px;
+    width: 100%;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #222;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-bar input::placeholder {
+    color: #aaa;
+}
+
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    border: 1px solid #444;
+    border-radius: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 10;
+    display: none;
+}
+
+.search-results a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 1px solid #444;
+}
+
+.search-results a:hover {
+    background-color: #444;
+}
+.results-container {
+    background: #222;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    max-height: 300px;
+    overflow-y: auto; /* Scrollable results */
+}
+
+.results-container a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    transition: color 0.3s ease;
+}
+
+.results-container a:hover {
+    color: #f1c40f;
+}
